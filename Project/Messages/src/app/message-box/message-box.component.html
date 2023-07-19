@@ -1,0 +1,20 @@
+
+<div *ngIf="messageBar" class="bar-wrapper">
+    <div class="bar" [ngClass]="data.score >= 6 ? 'high-rate-bar': 'low-rate-bar' ">
+        {{messageBar}} messages
+    </div>
+</div>
+
+<div class="card">
+    <div class="rigth-box">
+        <div class="header" [ngClass]="data.score >= 6 ? 'high-rate': 'low-rate' ">{{data.subject}}</div>
+        <div class="subtext">{{data.question}}</div>
+        <div class="text">
+            {{data.text}}
+        </div>
+    </div>
+    <div class="left-box">
+        <div class="team-text">{{data.team}}</div>
+        <div class="subtext">{{data.created_at | customDate}}</div>
+    </div>
+</div>

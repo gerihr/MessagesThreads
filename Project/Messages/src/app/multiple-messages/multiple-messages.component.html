@@ -1,0 +1,8 @@
+
+<app-message-box [data]="data[0]" [messageBar]="data.length" *ngIf="isExpanded" (click)="isExpanded=false"></app-message-box>
+
+<div *ngIf="!isExpanded">
+  <div *ngFor="let message of data">
+    <app-message-box [data]="message"></app-message-box>
+  </div>
+</div>

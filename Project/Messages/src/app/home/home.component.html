@@ -1,0 +1,9 @@
+<div class="wrapper">
+    <div class="container">
+        <div *ngFor="let item of data">
+            <app-message-box *ngIf="item.length==1" [data]="item[0]"></app-message-box>
+            <app-multiple-messages *ngIf="item.length>1" [data]="item"></app-multiple-messages>
+        </div>
+    </div>
+</div>
+
