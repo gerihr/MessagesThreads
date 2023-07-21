@@ -4,9 +4,9 @@ A web application built using Angular that allows users to load and render messa
 
 ## Technologies used
 
-Angular: A powerful and widely used framework for building web applications.
-JSON-Server: A lightweight mock REST API server used for serving the message data.
-Sass: A CSS preprocessor that enhances the styling capabilities of the application.
+  Angular: A powerful and widely used framework for building web applications.
+  JSON-Server: A lightweight mock REST API server used for serving the message data.
+  Sass: A CSS preprocessor that enhances the styling capabilities of the application.
 
 ## Installation and Setup
 
