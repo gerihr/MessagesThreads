@@ -8,9 +8,11 @@ import { Observable, catchError, map, of, shareReplay } from "rxjs";
   })
 export class DataService {
 
+    private readonly BASE_URL = 'http://localhost:3000';
+
     constructor(private http: HttpClient){}
     getData(): Observable<MessageThreadArray> {
-        return this.http.get('http://localhost:3000/threads').pipe(
+        return this.http.get(`${this.BASE_URL}/threads`).pipe(
             map((res:any) => {
               const modifiedData = [...res];
               modifiedData.forEach(m => {
