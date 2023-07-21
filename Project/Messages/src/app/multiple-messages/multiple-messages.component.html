@@ -1,5 +1,11 @@
+<div>
+  <div class="parent-box">
+    <div class="child-box-{{i}}" *ngFor="let message of data, let i=index">
+      <app-message-box [data]="message" [messageBar]="i==0 ? data.length : ''" *ngIf="isExpanded" (click)="isExpanded=false"></app-message-box>
+    </div>
+</div>
 
-<app-message-box [data]="data[0]" [messageBar]="data.length" *ngIf="isExpanded" (click)="isExpanded=false"></app-message-box>
+</div>
 
 <div *ngIf="!isExpanded">
   <div *ngFor="let message of data">

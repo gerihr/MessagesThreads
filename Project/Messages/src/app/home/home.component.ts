@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data/data.service';
+import { Observable } from 'rxjs';
+import { MessageThread, MessageThreadArray } from '../data/data.entity';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +9,11 @@ import { DataService } from '../data/data.service';
   styleUrls: ['./home.component.sass']
 })
 export class HomeComponent implements OnInit {
-  data;
+  messageData$!: Observable<MessageThreadArray>;
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    this.dataService.getData().subscribe(res=>this.data=res)
+    this.messageData$ = this.dataService.getData();
   }
 
 }

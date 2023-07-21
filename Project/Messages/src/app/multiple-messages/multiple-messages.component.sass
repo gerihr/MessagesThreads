@@ -1,0 +1,22 @@
+@use "sass:math"
+
+@mixin position ($index)
+  z-index: 1000/($index+1)
+  width: 100%
+  height: 100%
+  top: $index*0.6rem
+  left: $index*0.6rem
+
+@mixin child-style($colors-mod)
+  @for $i from 0 through $colors-mod
+    .child-box-#{$i}
+      @include position($i)
+      @if($i>0)
+        position: absolute
+      @else
+        position: inherit
+
+
+.parent-box
+  position: relative
+  @include child-style(3)

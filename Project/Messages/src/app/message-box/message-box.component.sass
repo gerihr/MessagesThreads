@@ -1,19 +1,33 @@
 $low-rate-color: #e89d40
+$mid-font: 0.938rem
+$small-font: 0.875rem
 
 .card
   border-radius: 0.625rem
+  min-width: 20rem
   box-shadow: rgba(0, 0, 0, 0.1)  0.25rem 0.25rem 0.75rem
   background-color: white
-  display: flex
-  justify-content: space-between
-  padding: 2rem
-  margin-bottom: 1.25rem
+  margin-bottom: 2rem
+  .box-wrapper
+    display: flex
+    justify-content: space-between
+    padding: 2rem
+
+
+.left-box
+  text-align: end
 
 .header
   font-weight: bold
 
+.rigth-box
+  max-width: 70%
+
 .low-rate
   color: $low-rate-color
+
+.low-rate-bar
+  background-color: $low-rate-color
 
 .high-rate
   color: #9335ff
@@ -21,39 +35,28 @@ $low-rate-color: #e89d40
 .high-rate-bar
   background-color: #27aae1
 
-.low-rate-bar
-  background-color: $low-rate-color
-
 .subtext
-  font-size: 0.875rem
+  font-size: $small-font
 
 .text
   margin-top: 0.625rem
-  font-size: 0.938rem
-
-.left-box
-  text-align: end
-
-.rigth-box
-  max-width: 70%
+  font-size: $mid-font
 
 .team-text
   font-weight: 500
 
-.bar
-  width: 10rem
-  border-radius: 0.938rem
-  position: absolute
-  margin-top: -0.625rem
-  margin-right: 1.25rem
-  color: white
-  display: flex
-  justify-content: center
-  align-items: center
-  font-size: 0.75rem
-  height: 1.25rem
-
-
 .bar-wrapper
   display: flex
   justify-content: flex-end
+  div
+    width: 10rem
+    border-radius: 0.938rem
+    position: absolute
+    margin-top: -0.625rem
+    margin-right: 1.25rem
+    color: white
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 0.75rem
+    height: 1.25rem
